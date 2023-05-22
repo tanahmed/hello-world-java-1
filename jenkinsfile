@@ -52,6 +52,11 @@ pipeline{
    }//end of stage
  }//end of stages
  post{
+ success{
+ 	script{
+	sh "java -cp target/helloworld-1.1.jar com.demo.helloworld.HelloWorld"
+	}
+ }
       always{
 		// emailext(
             // to: '$DEFAULT_RECIPIENTS',
