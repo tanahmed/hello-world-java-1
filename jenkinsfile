@@ -60,7 +60,8 @@ pipeline{
                      // upstreamDevelopers()
                      // ]
         // )
-		sendEmail('$DEFAULT_RECIPIENTS', null, "[${env.BLD_STATUS}] - ${env.PRJ_NAME} - Build # ${BUILD_NUMBER} ($BUILD_ID)", '''${SCRIPT, template="custom-html.template"}''') 
+	//	sendEmail('$DEFAULT_RECIPIENTS', null, "[${env.BLD_STATUS}] - ${env.PRJ_NAME} - Build # ${BUILD_NUMBER} ($BUILD_ID)", '''${SCRIPT, template="custom-html.template"}''') 
+	printMsg("$JOB_BASE_NAME")
       }
       //failure{
         //sendEmail('$DEFAULT_RECIPIENTS', null, "Build Failed", '''${SCRIPT, template="custom-html.template"}''') 
